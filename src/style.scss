@@ -1,4 +1,10 @@
-
-
+$theme-colors: (
+        "dark": #343333,
+        "primary": #fff,
+        "300":#343a40
+);
+.btn-primary {
+  border: 1px solid #343333;
+}
 
 @import "../node_modules/bootstrap/scss/bootstrap";
