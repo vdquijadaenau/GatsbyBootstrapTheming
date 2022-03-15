@@ -1,28 +1,29 @@
 import * as React from "react"
 import "../style.scss"
+import {FaBars} from "react-icons/fa";
 
 const IndexPage = () => {
     return (
         <>
             <body>
-            <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+            <nav className="navbar navbar-expand-lg  bg-transparent navbar-shadow">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Navbar</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <a className="navbar-brand" href="#">NavBar</a>
+                    <button type="button" className="btn btn-outline-primary btn-square">
+                        <FaBars/>
                     </button>
+
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link active " aria-current="page" href="#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
+                                <a className="nav-link white-font" href="#">Link</a>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                <a className="nav-link dropdown-toggle white-font" href="#" id="navbarDropdown"
+                                   role="button"
                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
                                 </a>
@@ -37,10 +38,6 @@ const IndexPage = () => {
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#" tabIndex="-1" aria-disabled="true">Another Link</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled" href="#" tabIndex="-1"
-                                   aria-disabled="true">Disabled</a>
                             </li>
                         </ul>
                         <form className="d-flex">
@@ -60,7 +57,7 @@ const IndexPage = () => {
                         </div>
 
                         <div className="mt-5 mb-5">
-                            <button type="button" className="btn btn-primary">Primary</button>
+                            <button type="button" className="btn btn-primary btn-square">Primary</button>
                             <button type="button" className="btn btn-secondary">Secondary</button>
                             <button type="button" className="btn btn-success">Success</button>
                             <button type="button" className="btn btn-danger">Danger</button>
@@ -71,14 +68,14 @@ const IndexPage = () => {
                             <button type="button" className="btn btn-link">Link</button>
                         </div>
                         <div className="mt-5 mb-5">
-                            <button type="button" className="btn btn-outline-primary">Primary</button>
-                            <button type="button" className="btn btn-outline-secondary">Secondary</button>
-                            <button type="button" className="btn btn-outline-success">Success</button>
-                            <button type="button" className="btn btn-outline-danger">Danger</button>
-                            <button type="button" className="btn btn-outline-warning">Warning</button>
-                            <button type="button" className="btn btn-outline-info">Info</button>
-                            <button type="button" className="btn btn-outline-light">Light</button>
-                            <button type="button" className="btn btn-outline-dark">Dark</button>
+                            <button type="button" className="btn btn-outline-primary btn-square">Primary</button>
+                            <button type="button" className="btn btn-outline-secondary btn-square">Secondary</button>
+                            <button type="button" className="btn btn-outline-success btn-square">Success</button>
+                            <button type="button" className="btn btn-outline-danger btn-square">Danger</button>
+                            <button type="button" className="btn btn-outline-warning btn-square">Warning</button>
+                            <button type="button" className="btn btn-outline-info btn-square">Info</button>
+                            <button type="button" className="btn btn-outline-light btn-square">Light</button>
+                            <button type="button" className="btn btn-outline-dark VS">Dark</button>
                         </div>
                         <div className="mt-3 mb-3">
                             <p className="fs-1">.fs-1 text</p>
