@@ -1,53 +1,29 @@
 import * as React from "react"
 import "../style.scss"
-import {FaBars} from "react-icons/fa";
 
 const IndexPage = () => {
     return (
         <>
             <body>
-            <nav className="navbar navbar-expand-lg  bg-transparent navbar-shadow">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">NavBar</a>
-                    <button type="button" className="btn btn-outline-primary btn-square">
-                        <FaBars/>
-                    </button>
+            <nav className="navbar navbar-shadow">
+                <div className="logo"> Branding Logo</div>
 
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active " aria-current="page" href="#">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link white-font" href="#">Link</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle white-font" href="#" id="navbarDropdown"
-                                   role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr className="dropdown-divider"></hr>
-                                    </li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#" tabIndex="-1" aria-disabled="true">Another Link</a>
-                            </li>
-                        </ul>
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            </input>
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
+                <div className="menu-items">
+                    <ul className="link">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                        <li><a href="#">Link 6</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <button className="toggle-btn btn-square"> Toggle</button>
+                    <button className="btn-square btn-contact"> button</button>
                 </div>
             </nav>
+            {/*end of navbar*/}
             <div className="container-xxl">
                 <div className="row mt-3">
                     <div className="col-lg-4 col-md-6">

@@ -3,13 +3,20 @@
 .btn-square {
   border-radius: 0;
   font-size: 1.25rem;
-  padding-bottom: 0.375rem;
-  padding-top: 0.06725rem;
-  @media screen and (min-width: 991px) {
-
-    display: none;
-  }
+  background: transparent;
+  padding: 0.375rem;
+  margin: 0;
+  text-align: center;
+  border-width: 1px;
 }
+
+.btn-contact {
+  margin-left: 1rem;
+  //@media screen and(max-width: 991px) {
+  //  display: none;
+  //}
+}
+
 
 .white-font {
   color: $white !important;
@@ -28,3 +35,57 @@
   box-shadow: none;
 }
 
+.navbar {
+  //position: fixed !important;
+  margin-top: 0;
+  height: 80px;
+  z-index: 10;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  //justify-content: space-around;
+}
+
+.logo {
+  padding-left: 10px;
+  margin-left: 1.5rem;
+}
+
+.link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin: auto;
+
+  li {
+    display: inline-block;
+    padding: 5px;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-right: 2rem;
+    }
+  }
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media screen and(max-width: 991px) {
+    display: none;
+  }
+}
+
+.toggle-btn {
+  @media screen and(min-width: 991px) {
+    display: none;
+  }
+}
