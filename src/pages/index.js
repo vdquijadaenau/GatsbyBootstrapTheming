@@ -1,30 +1,34 @@
 import * as React from "react"
 import "../style.scss"
+import {Container} from "react-bootstrap";
 
 const IndexPage = () => {
     return (
-        <>
-            <body>
-            <nav className="navbar navbar-shadow">
-                <div className="logo"> Branding Logo</div>
+        <div className="wrapper">
+            <div className="header--navbar">
+                <Container>
+                    <nav className="navbar-header navbar-header--shadow navbar-header--collapsed">
+                        <div className="logo"> Branding Logo</div>
 
-                <div className="menu-items">
-                    <ul className="link">
-                        <li><a href="#">Link 1</a></li>
-                        <li><a href="#">Link 2</a></li>
-                        <li><a href="#">Link 3</a></li>
-                        <li><a href="#">Link 4</a></li>
-                        <li><a href="#">Link 5</a></li>
-                        <li><a href="#">Link 6</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <button className="toggle-btn btn-square"> Toggle</button>
-                    <button className="btn-square btn-contact"> button</button>
-                </div>
-            </nav>
+                        <div id="headerNav" className="header--nav header--nav--collapse">
+                            <ul className="nav navbar-nav">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                                <li><a href="#">Link 5</a></li>
+                                <li><a href="#">Link 6</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <button className="toggle-btn btn-square"> Toggle</button>
+                            <button className="btn-square btn-contact"> button</button>
+                        </div>
+                    </nav>
+                </Container>
+            </div>
             {/*end of navbar*/}
-            <div className="container-xxl">
+            <div className="container-xxl top-space">
                 <div className="row mt-3">
                     <div className="col-lg-4 col-md-6">
                         <div className="mt-3 mb-3">
@@ -361,8 +365,7 @@ const IndexPage = () => {
                     </div>
                 </div>
             </div>
-            </body>
-        </>
+        </div>
     )
 }
 
