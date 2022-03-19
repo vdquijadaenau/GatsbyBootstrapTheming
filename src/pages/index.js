@@ -1,32 +1,27 @@
 import * as React from "react"
 import "../style.scss"
-import {Container} from "react-bootstrap";
 
 const IndexPage = () => {
     return (
         <div className="wrapper">
-            <div className="header--navbar">
-                <Container>
-                    <nav className="navbar-header navbar-header--shadow navbar-header--collapsed">
-                        <div className="logo"> Branding Logo</div>
+            <nav className="navbar-header navbar-header--shadow">
+                <div className="logo">
+                    victor <br/>
+                    <strong>Quijada</strong>
+                </div>
 
-                        <div id="headerNav" className="header--nav header--nav--collapse">
-                            <ul className="nav navbar-nav">
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                                <li><a href="#">Link 4</a></li>
-                                <li><a href="#">Link 5</a></li>
-                                <li><a href="#">Link 6</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <button className="toggle-btn btn-square"> Toggle</button>
-                            <button className="btn-square btn-contact"> button</button>
-                        </div>
-                    </nav>
-                </Container>
-            </div>
+                <ul className="nav-links nav-links--collapse">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                    <li><a href="#">Link 5</a></li>
+                    <li><a href="#">Link 6</a></li>
+                </ul>
+                <div>
+                    <button className="btn btn-outline-primary btn-square"> BS</button>
+                </div>
+            </nav>
             {/*end of navbar*/}
             <div className="container-xxl top-space">
                 <div className="row mt-3">
@@ -370,3 +365,27 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+//
+// <div className="header--navbar">
+//     <Container>
+//     <nav className="navbar-header navbar-header--shadow navbar-header--collapsed">
+//     <div className="logo"> Branding Logo</div>
+//
+// <div id="headerNav" className="header--nav header--nav--collapse">
+//     <ul className="nav navbar-nav">
+//         <li><a href="#">Link 1</a></li>
+//         <li><a href="#">Link 2</a></li>
+//         <li><a href="#">Link 3</a></li>
+//         <li><a href="#">Link 4</a></li>
+//         <li><a href="#">Link 5</a></li>
+//         <li><a href="#">Link 6</a></li>
+//     </ul>
+// </div>
+// <div>
+//     <button className="toggle-btn btn-square"> Toggle</button>
+//     <button className="btn-square btn-contact"> button</button>
+// </div>
+// </nav>
+// </Container>
+// </div>

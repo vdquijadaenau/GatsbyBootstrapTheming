@@ -1,5 +1,7 @@
 @use "./Custom" as *;
 
+
+//Base
 body {
   background: #f9f9f9;
   font-family: 'Raleway', sans-serif;
@@ -9,22 +11,12 @@ body {
   height: 100%;
 }
 
-//NAVBAR
-.header--navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 20px;
-  -webkit-transition: .25s;
-  transition: .25s;
-  z-index: 1;
-}
-
+//NAVIGATION BAR
 nav {
   width: 100%;
-  height: 100%;
+  min-height: 8vh;
   display: flex;
+  padding-bottom: 0.25rem;
   align-items: center;
   justify-content: space-between;
   background: transparent;
@@ -33,11 +25,10 @@ nav {
 .navbar-header {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
   padding-top: 20px;
-  -webkit-transition: .25s;
-  transition: .25s;
+  padding-right: 1.4rem;
+  -webkit-transition: .25s all ease-in-out;
+  transition: .25s all ease-in-out;
   z-index: 10;
 
   &--shadow {
@@ -51,75 +42,91 @@ nav {
   //}
 }
 
+//.navbar-shadow {
+//  box-shadow: 0 0 4px rgb(0 0 0 / 14%), 0 4px 8px rgb(0 0 0 / 28%);
+//}
 
 //Menu Links
 
-.header--nav {
-  float: right;
+.nav-links {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  margin: auto;
 
-  .navbar-nav {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    margin: auto;
+  li {
+    padding: 0.94rem;
     list-style: none;
 
-    .navbar {
-      min-height: 0;
-      margin-bottom: 0;
-      border: none;
-      border-radius: 0;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      position: relative;
+      padding: 15px 0 10px;
+      color: #303030;
+      outline: 0;
     }
+
+    a:hover, a:focus {
+      background: transparent;
+    }
+
+    a::before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 1.125rem;
+      width: 0;
+      height: 0.063rem;
+      background-color: #303030;
+      -webkit-transition: width .25s ease-in-out;
+      transition: width .25s ease-in-out;
+    }
+
+    a:hover:before {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and(max-width: 991px) {
+  .nav-links {
+    top: 8vh;
+    width: 100%;
+    position: absolute;
+    height: 92vh;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 
     li {
-      padding: 0.94rem;
-      text-decoration: none;
+      padding: 10px 15px;
 
       a {
-        text-decoration: none;
-        text-transform: uppercase;
-        position: relative;
-        padding: 15px 0 10px;
-        color: #303030;
-        outline: 0;
+        font-size: 1.5rem;
+        text-space: 0.4rem;
       }
 
-      a:hover, a:focus {
-        background: transparent;
-      }
-
-      a::before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        bottom: 20px;
-        width: 0;
-        height: 1px;
-        background-color: #303030;
-        -webkit-transition: width .25s ease-in-out;
-        transition: width .25s ease-in-out;
-      }
-
-      a:hover:before {
-        width: 100%;
+      a:before {
+        height: 0.188rem;
+        bottom: 1.5rem
       }
     }
   }
-
-  @media screen and(max-width: 991px) {
+  .nav-links--collapse {
     display: none;
   }
-
 }
 
 /////Logo
 .logo {
-  padding-left: 10px;
-  //margin-left: 1.5rem;
-}
-
-.header-navbar--nav {
-  float: right;
+  padding-left: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: 1.25rem;
 }
 
 //////
@@ -135,24 +142,10 @@ nav {
 }
 
 //
-.btn-square .btn--primary {
-  display: inline-block;
-  padding: 16px 30px 15px 29px;
-  color: #fff;
-  border: 2px solid transparent;
+.btn-square {
   border-radius: 0;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
-
-  &:hover,
-  &:focus {
-    color: #fff;
-    box-shadow: none;
-    text-decoration: none;
-    outline: 0;
-  }
 }
+
 
 .btn-contact {
   margin-left: 1rem;
@@ -161,18 +154,6 @@ nav {
   }
 }
 
-
-.white-font {
-  color: $white !important;
-}
-
-.navbar-shadow {
-  box-shadow: 0 0 4px rgb(0 0 0 / 14%), 0 4px 8px rgb(0 0 0 / 28%);
-}
-
-.icon-color {
-  color: $darkGrey !important;
-}
 
 .btn-outline-primary:focus,
 .btn-outline-primary:active:focus {
