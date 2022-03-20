@@ -1,7 +1,10 @@
 import * as React from "react"
+import {useState} from "react"
+import BurgerButton from "../componentes/Burger";
 import "../style.scss"
 
 const IndexPage = () => {
+    const [toggle, setToggle] = useState(false)
     return (
         <div className="wrapper">
             <nav className="navbar-header navbar-header--shadow">
@@ -10,7 +13,7 @@ const IndexPage = () => {
                     <strong>Quijada</strong>
                 </div>
 
-                <ul className="nav-links nav-links--collapse">
+                <ul className={`nav-links ${toggle ? "" : "nav-links--collapse"}`}>
                     <li><a href="#">Link 1</a></li>
                     <li><a href="#">Link 2</a></li>
                     <li><a href="#">Link 3</a></li>
@@ -18,9 +21,10 @@ const IndexPage = () => {
                     <li><a href="#">Link 5</a></li>
                     <li><a href="#">Link 6</a></li>
                 </ul>
-                <div>
-                    <button className="btn btn-outline-primary btn-square"> BS</button>
+                <div className={'btn-show'} onClick={() => setToggle(!toggle)}>
+                    <BurgerButton toggle={toggle}/>
                 </div>
+
             </nav>
             {/*end of navbar*/}
             <div className="container-xxl top-space">
